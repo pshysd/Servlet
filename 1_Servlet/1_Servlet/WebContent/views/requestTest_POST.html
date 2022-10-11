@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>POST 방식으로 요청 후 응답 페이지 받아보기</h1>
+
+        <p>
+            특징 1. POST 방식으로 요청하는 것은 URL의 Body 영역에 데이터를
+            포함시켜서 요청 <br />
+            -> 사용자가 입력한 값(데이터)들이 URL에 노출되지 않음 <br />
+            -> 보안 유지가 가능함 <br />
+            즉, 로그인이나 회원가입 같은 경우 POST 방식이 더 적합하다.
+            <br /><br />
+
+            특징 2. URL의 Body 영역은 전송하는 데이터의 길이의 제한이 없음.
+            <br />
+            즉, 게시판 작성 같은 경우는 POST 방식이 더 적합하다. <br /><br />
+
+            특징 3. 즐겨찾기는 가능하나 전달되는 데이터가 URL에 노출되어있지
+            않기 때문에 (기존에 봤던 그 응답화면을 볼 수 없을 것...) 즉, 검색
+            기능에는 POST 방식이 부적합하다. <br /><br />
+
+            특징 4. 최대 요청받는 시간이 존재(Time Out) <br />
+            페이지 요청 시 기다리는 시간이 있다.
+        </p>
+
+        <form action="/1_Servlet/test2.do" method="post">
+            <ul>
+                <li>이름 : <input type="text" name="name" id="name" /></li>
+                <!-- input 태그 사용 시 key 값은 반드시 넘겨야 함 (name 속성) -->
+                <li>
+                    성별 : 남자
+                    <input type="radio" name="gender" value="M" /> 여자
+                    <input type="radio" name="gender" value="F" />
+                    <!-- radio의 경우 같은 묶음으로 묶어줄 경우엔 name 속성을 동일하게 해야 함 -->
+                </li>
+                <li>나이 : <input type="number" name="age" /></li>
+                <li>
+                    거주지 :
+                    <select name="city">
+                        <option value="서울특별시">서울특별시</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원도">강원도</option>
+                        <option value="충청도">충청도</option>
+                        <option value="경상도">경상도</option>
+                        <option value="전라도">전라도</option>
+                    </select>
+                </li>
+                <li>
+                    키 :
+                    <input type="range" name="height" min="140" max="200" />
+                </li>
+                <li>
+                    좋아하는 음식(중복 선택 가능) : <br />
+                    한식<input type="checkbox" name="food" value="한식" />
+                    중식<input type="checkbox" name="food" value="중식" />
+                    일식<input type="checkbox" name="food" value="일식" />
+                    양식<input type="checkbox" name="food" value="양식" />
+                    분식<input type="checkbox" name="food" value="분식" />
+                    <!-- checkbox의 경우 같은 묶음으로 묶어줄 경우 name 속성을 동일하게 지정 
+            여러 개의 선택지 중에서 여러 개 선택 가능
+          -->
+                </li>
+                <li>
+                    <input type="submit" />
+                    <input type="reset" />
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>
