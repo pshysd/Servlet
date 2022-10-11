@@ -12,11 +12,12 @@
   
   <!-- 이 프로젝트 전체에 대한 에러페이지 지정 -->
   <error-page>
-  	<error-code>500</error-code>
-  	<location>/views/error500.jsp</location>
+    <error-code>500</error-code>
+    <location>/views/error500.jsp</location>
   </error-page>
+
   <error-page>
-  	<error-code>404</error-code>
-  	<location>/views/error404.jsp</location>
+  <error-code>404</error-code>
+  <location>/views/error404.jsp</location>
   </error-page>
 </web-app>
