@@ -53,7 +53,7 @@
         </li>
      </ol>
     
-     <a href="views/01_ScriptingElement.jsp">View Detail</a>
+     <a href="views/01_ScriptingElement.jsp">View Detail&raquo;</a>
 
 
      <h3>2. 지시어 (Directive)</h3>
@@ -61,6 +61,22 @@
      <pre>
         [ 표현법 ]
         &lt;%@ page/include/taglib 속성="속성값" 속성="속성값"%&gt;
+
+        JSP Page 전체에 영향을 미치는 정보를 기술할 때 쓰임
      </pre>
+
+     <ol>
+        <li>
+            page 지시어 : 현재의 jsp 페이지를 처리하는데 필요한 각종 속성을 기술하는 부분 <br>
+            <ul>
+                <li>language : 사용할 스크립트 언어 유형을 지정</li>
+                <li>contentType : 웹 브라우저가 받아볼 해당 페이지의 형식, 인코딩 방식을 지정</li>
+                <li>pageEncoding : jsp 파일에 기록된 자바 코드의 인코딩 방식을 지정</li>
+                <li>import : 자바의 import와 같은 의미</li>
+                <li>errorPage : 해당 jsp 상에서 오류가 발생했을 경우 보여줄 에러 페이지의 경로를 지정</li>
+            </ul>
+            <a href="views/02_DirectivePage.jsp">View Detail &raquo;</a> <!-- >> == &raquo;-->
+        </li>
+     </ol>
 </body>
 </html>
