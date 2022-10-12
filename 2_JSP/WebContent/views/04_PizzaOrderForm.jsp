@@ -89,8 +89,8 @@
           <tr>
             <th>결제 방식</th>
             <td>
-              <input type="radio" name="payment" id="card" />카드결제
-              <input type="radio" name="payment" id="cash" />현금결제
+              <input type="radio" name="payment" value="card" />카드결제
+              <input type="radio" name="payment" value="cash" />현금결제
             </td>
           </tr>
         </table>
