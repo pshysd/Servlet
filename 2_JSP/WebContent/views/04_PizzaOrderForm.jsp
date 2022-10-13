@@ -1,4 +1,4 @@
-z<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -144,12 +144,12 @@ pageEncoding="UTF-8"%>
                             <input
                                 type="radio"
                                 name="payment"
-                                id="card"
+                                value="card"
                             />카드결제
                             <input
                                 type="radio"
                                 name="payment"
-                                id="cash"
+                                value="cash"
                             />현금결제
                         </td>
                     </tr>
